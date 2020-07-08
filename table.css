@@ -1,0 +1,40 @@
+table {
+	border-collapse: collapse;
+}
+
+th {
+	border: 2px solid red;
+}
+
+td {
+	border: 1px solid black;
+}
+
+input {
+	border: 0px;
+}
+
+#input {
+	margin: 10px;
+	width: 100px;
+	height: 20px;
+	background: yellow;
+}
+
+#textarea {
+	background: lightgreen;
+}
+
+td, th {
+	text-align: right;
+}
+
+#a123 {
+	color: green;
+	font-family: fantasy;
+}
+
+pre {
+	font-family: serif;
+	margin: 5px;
+}
