@@ -420,13 +420,14 @@ var eventAdd = [];
 function newEl(el) {
 	el.lastChild.addEventListener('keypress', function(event) {
 		var x = String.fromCharCode(event.charCode);
-		if (x == '=' && !state) {
+		var tKey = event.key;
+		if (x == '=' && !state || tKey == '=') {
 			setTimeout(function() {
 				var solution = findN(el);
 				el.lastChild.value = el.lastChild.value + ' ' + solution;
 			}, 100);
 		}
-		if ((x == '=') && state) {
+		if ((x == '=') && state || tKey == '=') {
 			setTimeout(function() {
 				var solution = findN(el);
 				el.lastChild.value = el.lastChild.value + ' ' + solution;
