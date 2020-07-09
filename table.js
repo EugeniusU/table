@@ -421,13 +421,14 @@ function newEl(el) {
 	el.lastChild.addEventListener('keypress', function(event) {
 		var x = String.fromCharCode(event.charCode);
 		var tKey = event.key;
-		if (x == '=' && !state || tKey == '=') {
+/*		if ((x == '=' && !state) || (tKey == '=')) {
 			setTimeout(function() {
 				var solution = findN(el);
 				el.lastChild.value = el.lastChild.value + ' ' + solution;
 			}, 100);
-		}
-		if ((x == '=') && state || tKey == '=') {
+		}*/
+//		if ((x == '=' && state) || (tKey == '=')) {
+		if (x == '=' || tKey == '=') {
 			setTimeout(function() {
 				var solution = findN(el);
 				el.lastChild.value = el.lastChild.value + ' ' + solution;
@@ -493,6 +494,8 @@ function testKeys(stringFromTextarea) {
 	
 	var arrayValues = stringFromTextarea.split('\n');
 	var lastValue = arrayValues[arrayValues.length - 1];
+	
+	lastValue = lastValue.toLowerCase();
 
 ///	var findWord = /\w+/;
 	var findWord = /(\w+)\s?(\w+)*/;
