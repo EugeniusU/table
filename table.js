@@ -428,19 +428,33 @@ function newEl(el) {
 			}, 100);
 		}*/
 //		if ((x == '=' && state) || (tKey == '=')) {
-		setTimeout(function() {
-			var lastChar = el.lastChild.value[el.lastChild.value.length - 1];
+/*		setTimeout(function() {
+//			var lastChar = el.lastChild.value[el.lastChild.value.length - 1];
+//			if (lastChar == '=') {
+//				var solution = findN(el);
+//				el.lastChild.value = el.lastChild.value + ' ' + solution;
+//			}
+			var allValues = event.target.value;
+			var lastChar = allValues[allValues.length - 1];
 			if (lastChar == '=') {
 				var solution = findN(el);
 				el.lastChild.value = el.lastChild.value + ' ' + solution;
 			}
-		}, 100);
+		}, 100);*/
 		if (x == '=' || tKey == '=') {
 			setTimeout(function() {
 				var solution = findN(el);
 				el.lastChild.value = el.lastChild.value + ' ' + solution;
 			}, 100);
 		}
+		setTimeout(function() {
+			var allValues = event.target.value;
+			var lastChar = allValues[allValues.length - 1];
+			if (lastChar == '=') {
+				var solution = findN(el);
+				el.lastChild.value = el.lastChild.value + ' ' + solution;
+			}
+		}, 100);
 	});
 }
 
