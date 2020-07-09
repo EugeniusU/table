@@ -418,7 +418,8 @@ function someValue3(from, to, step, randomQ) {
 var eventAdd = [];
 
 function newEl(el) {
-	el.lastChild.addEventListener('keypress', function(event) {
+//	el.lastChild.addEventListener('keypress', function(event) {
+	el.lastChild.addEventListener('keydown', function(event) {
 		var x = String.fromCharCode(event.charCode);
 		var tKey = event.key;
 /*		if ((x == '=' && !state) || (tKey == '=')) {
@@ -457,7 +458,7 @@ function newEl(el) {
 		}, 100);
 	});
 }
-
+sTest(4, 4);
 
 function copy(inOrOut, vector, vector2) {
 	var array = [];
